@@ -26,7 +26,8 @@ console.log(testGreeting); // printing the output value of the function.
  *
  * These two variables will be used to invoke the functions #2 - #5.
 */ 
-
+var bango1 = 5;
+var bango2 = 10;
 
 
 /*
@@ -44,8 +45,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `sum` to test your code.
 */
 
-
-
+function add(num1 , num2 ){
+    return num1 + num2;
+}
+var sum = add(bango1 , bango2);
+console.log(sum);
 /*
  * #3
  * Function - subtract
@@ -59,7 +63,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Invoke the function and assign it to a variable named `difference`.
  * Console.log `difference` to test your code.
 */ 
-
+function subtract(num1 , num2){
+    return num1 - num2;
+}
+var difference = subtract(bango1 , bango2);
+console.log(difference);
 
 
 /*
@@ -76,7 +84,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `product` to test your code.
 */
 
-
+function multiply(num1 , num2){
+    return num1 * num2;
+}
+var product = multiply(bango1 , bango2);
+console.log(product);
 
 /*
  * #5
@@ -91,7 +103,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Invoke the function and assign it to a variable named `quotient`.
  * Console.log `quotient` to test your code.
 */
-
+function divide(num1 , num2){
+    return(num1 / num2);
+}
+var quotient = divide(bango1 , bango2);
+console.log(quotient);
 
 
 /*
@@ -105,6 +121,10 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will return the string "There are `x` states in the United States." Where `x` is the value when you invoke the function. Invoke this function using the variable `sum`. 
  * Console.log your result.
 */
+function checkSum(x){
+ return "there are" + " " + x + " " + "states in the united states";
+}
+console.log(checkSum(sum));
 
 
 
@@ -120,8 +140,10 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log your results.
 */ 
 
-
-
+function checkDifference(x){
+    return "last night I dream that I ate " +  x +  " taco bell soft tacos";
+}
+console.log(checkDifference(difference));
 /*
  * #8
  * Function - checkProduct
@@ -132,8 +154,10 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will multiply the values stored in the sum and product variables.
  * Console.log your result.  
 */
-
-
+function checkProduct(){
+    return sum + product;
+}
+console.log(checkProduct());
 
 /*
  * #9
@@ -146,8 +170,10 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log your result.  
 */
 
-
-
+function checkQuotient(){
+    return product * quotient;
+}
+console.log(checkQuotient());
 /*
  * #10
  * Function - addThenSubtract
@@ -167,8 +193,16 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will add the first two parameters together. Then with the sum of that operation, subtract it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
+var bango3 = 2;
+var bango4 = 4;
+var bango5 = 6;
 
-
+function addThenSubtract(num1 , num2 , num3){
+   var addnums = add(num1 , num2)
+   console.log(addnums);
+    return subtract(addnums , num3);
+}
+console.log(addThenSubtract(bango3 , bango4 , bango5));
 
 /*
  * #11
@@ -183,8 +217,11 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will multiply the first two parameters together. Then with the product of that operation, divide it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
-
-
+function multiplyThenDivide(num1 , num2 , num3){
+var multiplynums = multiply(num1 , num2)
+return divide(multiplynums , num3);
+}
+console.log(multiplyThenDivide(bango3 , bango4 , bango5));
 
 /*
  * #12
@@ -198,7 +235,10 @@ console.log(testGreeting); // printing the output value of the function.
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
 
-
+function createFullName(firstName , lastName){
+return firstName + " " + lastName;
+}
+console.log(createFullName("justin" , "basuil"));
 
 /*
  * #13 
@@ -214,11 +254,14 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log your result.
  */
 
-
-
+function eatFood(firstName , lastName , food){
+return firstName + " " + lastName + " " + "eats" + " " + food + " " + "everday for breakfast";
+}
+var justinsFavoriteFood = eatFood('justin' , 'basuil' , 'pizza');
+console.log(justinsFavoriteFood);
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
-*  gained figure out how to build the necessary functions. Use your google-fu to 
+*  gained to figure out how to build the necessary functions. Use your google-fu to 
 *  figure out anything you don't know! Ganbatte (good luck)! */
 /************** FIRE ALL CANNONS ***************/
 
@@ -228,8 +271,10 @@ console.log(testGreeting); // printing the output value of the function.
  * Create a function that will take in a parameter named `inches`. This function will convert inches to centimeters(cm).
  * Console.log your result. 
 */
-
-
+function shoeSize(inches){
+return inches * 2.54;
+}
+console.log(shoeSize(9));
 
 /*
  * #15
@@ -240,7 +285,13 @@ console.log(testGreeting); // printing the output value of the function.
  * Example input: "believe you can and you're halfway there."
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
- 
+function allCaps(str){
+    var res = str.toUpperCase();
+    console.log(res);
+    
+} 
+allCaps("believe you can and you're halfway there.");
+
 
 
 /*
@@ -250,8 +301,11 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
-
-
+function oneCap(str){
+    var str = str.charAt(0).toUpperCase() + str.slice(1);
+    console.log(str);
+}
+oneCap("believe you can");
 
 /*
  * #17
@@ -259,20 +313,31 @@ console.log(testGreeting); // printing the output value of the function.
  * Create a function named verifyDrivingAge which takes a parameter named `age`. 
  * This function returns a Boolean value, `true` or `false`, depending on 
  * whether `age` is above or below the legal driving age in the state of Hawaii.
- *
+ * leagal driving age is 16 in hawaii
  * Call this function and pass in a number value.
- * Store the return value to a variable named `canDrive`. Console.log your result.
+ * Store the return value to a variable named `roadTrip`. Console.log your result.
  */
 
+function verifyDrivingAge(age){
+    if (age > 16){
+        return true;
+    } else {
+        return false;
+    }
 
+}
+var roadTrip = verifyDrivingAge(17);
 /**
  * #18
  * Function - roadTrip
  * Create a function named roadTrip. This function will check the value stored in the `roadTrip` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We goin on a Road Trip!" If false, then it will return the message "Meh, I guess I'll just stay home." Store the return value to a variable named `canDrive`. Console.log your result.
  */
+function roadTrip(checkAge){
+    if (checkAge === true) {
+        return "Cheee Hoo!"; 
+    } else {
+        return "Meh.";
+    }
 
-
-
-
-
-
+}
+console.log(roadTrip(roadTrip));
